@@ -18,7 +18,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(103% - 100px); /* Ajustado a altura do carrossel-frame */
+    height: calc(103% - 100px); 
 }
 
 .carrossel {
@@ -56,7 +56,7 @@ h1 {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 15%;
 }
 
 .prev,.next {
@@ -90,20 +90,47 @@ h1 {
 .footer {
     text-align: center;
     color: #1d191d; 
-    margin-top: auto;  
+    margin-top: auto; 
+    background-color: rgba(248, 87, 200, 0.8); /* Fundo semitransparente para o footer */
+    padding: 1px 0;
+    width: 100%;
+    position: flex;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 
 /*RESPONSIVO*/
-
 @media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    
     .carrossel-inner {
-        width: 200%; 
+        width: 300%; 
+    }
+
+    .slide img {
+        width: 50%; 
     }
 }
 
 @media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
     .carrossel-inner {
-        width: 100%; 
+        width: 300%; 
+    }
+
+    .slide img {
+        width: 40%; 
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
